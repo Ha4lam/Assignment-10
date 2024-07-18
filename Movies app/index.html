@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies News</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <header class="d-flex justify-content-between align-items-center my-4">
+    <button id="sidebar-toggle" class="btn btn-primary">☰</button>
+    <h1 class="logo"><span class="text-danger">Movies</span><span class="text-info">News</span></h1>
+    <input type="text" id="search" class="form-control w-50" placeholder="Get movies by word...">
+  </header>
+  <div class="loading-bar" id="loading-bar"></div>
+  <div id="movies-container" class="row">
+    <!-- Movies will be displayed here -->
+  </div>
+  <div class="error-message"></div>
+  <form id="contact-form" class="contact-form bg-dark text-white p-4 my-4">
+    <h2>Contact Us</h2>
+    <div class="form-group mb-3">
+      <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group mb-3">
+      <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group mb-3">
+      <input type="tel" id="phone" class="form-control" placeholder="Enter your phone" required>
+    </div>
+    <div class="form-group mb-3">
+      <input type="number" id="age" class="form-control" placeholder="Enter your age" required>
+    </div>
+    <div class="form-group mb-3">
+      <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+    </div>
+    <div class="form-group mb-3">
+      <input type="password" id="validate-password" class="form-control" placeholder="Validate your password" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </form>
+</div>
+<div id="popup" class="popup d-none">
+  <!-- Popup content will go here -->
+</div>
+<div id="sidebar" class="sidebar bg-dark text-white p-3">
+  <ul class="list-unstyled">
+    <li><a href="#" id="now-playing" class="text-white">Now Playing</a></li>
+    <li><a href="#" id="popular" class="text-white">Popular</a></li>
+    <li><a href="#" id="top-rated" class="text-white">Top Rated</a></li>
+    <li><a href="#" id="trending" class="text-white">Trending</a></li>
+    <li><a href="#" id="upcoming" class="text-white">Upcoming</a></li>
+    <li><a href="#contact-form" class="text-white">Contact Us</a></li>
+  </ul>
+  <footer class="footer mt-3">
+    <div class="footer-content text-center">
+      <p>Copyright &copy; 2022 All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#" class="text-white mx-2"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fa fa-globe"></i></a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/script.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
